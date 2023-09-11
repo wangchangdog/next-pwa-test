@@ -1,8 +1,16 @@
-'use client';
+"use client";
 
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/navbar";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+} from "@nextui-org/navbar";
 import * as React from "react";
 
 import { Logo } from "./Logo";
@@ -31,9 +39,7 @@ export const Header = () => {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <Logo
-            logo="/next.svg"
-          />
+          <Logo logo="/next.svg" />
           <p className="font-bold text-inherit">ACME</p>
         </NavbarBrand>
       </NavbarContent>
@@ -70,7 +76,11 @@ export const Header = () => {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+                index === 2
+                  ? "primary"
+                  : index === menuItems.length - 1
+                  ? "danger"
+                  : "foreground"
               }
               className="w-full"
               href="#"
@@ -83,4 +93,4 @@ export const Header = () => {
       </NavbarMenu>
     </Navbar>
   );
-}
+};
